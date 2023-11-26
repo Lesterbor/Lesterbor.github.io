@@ -12,3 +12,114 @@
 	align-items: center;
 	width: 100%;
 }
+.user-main-activity{
+	width: 80%;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	top: -50px;
+	left: 20px;
+}
+
+.user-main-icon{
+	width: 100%;
+	height: auto;
+}
+
+.user-main-icon img{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+}
+.user-main-info-body{
+	margin-left: 5px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-self: flex-end;
+	align-items: flex-end;
+	justify-content: flex-start;
+
+}
+.user-main-info{
+	width: 20%;
+	height: 50%;
+	margin-left: 20px;
+}
+.user-main-info-name{
+	font-weight: 600;
+	font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 用户头像特效 */
+.outer-circle {
+	position: relative;
+	height: 100px;
+	width:100px;
+	background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+	border-radius: 50%;
+	animation: rotate 1.5s linear infinite;
+  }
+  
+  .outer-circle span {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+	border-radius: 50%;
+  }
+  
+  span:nth-child(1) {
+	filter: blur(5px);
+  }
+  
+  span:nth-child(2) {
+	filter: blur(10px);
+  }
+  
+  span:nth-child(3) {
+	filter: blur(25px);
+  }
+  
+  span:nth-child(4) {
+	filter: blur(150px);
+  }
+  
+  .inner-circle {
+	height: 90px;
+	width: 90px;
+	position: absolute;
+	background: black;
+	top: 5px;
+	left: 5px;
+	border-radius: 50%;
+	z-index: 9;
+  }
+  
+  @keyframes rotate {
+	0% {
+	  filter: hue-rotate(0deg);
+	}
+	100% {
+	  filter: hue-rotate(360deg);
+	}
+  }
+
