@@ -14,9 +14,15 @@
 }
 .user-main-activity{
 	width: 80%;
-	height: 100px;
+	height: 70px;
 	display: flex;
 	flex-direction: row;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 2px;
+}
+.user-main-icon-box{
 	position: relative;
 	top: -50px;
 	left: 20px;
@@ -38,19 +44,77 @@
 	height: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-self: flex-end;
-	align-items: flex-end;
+	align-items: center;
 	justify-content: flex-start;
 
 }
 .user-main-info{
-	width: 20%;
-	height: 50%;
+	width: 100%;
+	height: 100%;
 	margin-left: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	
 }
-.user-main-info-name{
+.user-main-info-name-box{
+	height: 100%;
+	padding: 10px;
+}
+.user-info-name{
 	font-weight: 600;
-	font-size: 25px;
+	font-size: 20px;
+}
+.user-info-tag{
+	font-size: 15px;
+	font-weight: 600;
+	color: rgba(0,0,0,.6);
+}
+
+
+.user-main-info-link{
+	width: 20%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.user-info-ico{
+	width: auto;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-right: 10px;
+}
+.user-info-ico img{
+	height: 35px;
+	width: 35px;
+}
+.user-info-text-box{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.user-info-item{
+	width: 25%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.user-info-text{
+	height: 50%;
+	padding: 2px;
+	line-height: 14px;
+	font-size: 12px;
+	color: #99a2aa;
+}
+.user-info-number{
+	height: 50%;
+    color: #222;
+    font-size: 15px;
 }
 
 
