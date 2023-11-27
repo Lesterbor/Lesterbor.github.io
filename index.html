@@ -3,7 +3,6 @@
 
 <script src="./js/jquery-3.5.1.min.js"></script>
 
-
 <html lang="zh-Hans-CN">
 	<head>
 		<meta charset="utf-8" />
@@ -41,8 +40,8 @@
 									<div class="user-info-text">
 										粉丝数
 									</div>
-									<div class="user-info-number">
-										800
+									<div id="UserFansNumber" class="user-info-number">
+										***
 									</div>
 								</div>
 								<div class="user-info-item">
@@ -50,7 +49,7 @@
 										获赞数
 									</div>
 									<div class="user-info-number">
-										1407
+										***
 									</div>
 								</div>
 								<div class="user-info-item">
@@ -58,7 +57,7 @@
 										播放量
 									</div>
 									<div class="user-info-number">
-										7.9万
+										***
 									</div>
 								</div>
 								<div class="user-info-item">
@@ -66,7 +65,7 @@
 										作品数
 									</div>
 									<div class="user-info-number">
-										14
+										***
 									</div>
 								</div>
 							</div>
@@ -77,9 +76,6 @@
 
 
 			<button id="update" type="button" onclick="userBtnClick()">按钮</button>
-		
-
-
 
 		</div>
 	</body>
@@ -111,6 +107,8 @@
 
 		//加载相关数据
 		QF_LoadUserFansNumber();
+		QF_LoadUserViewNumber();
+
 	};
 
 	//当浏览器窗口大小改变时，设置显示内容的高度
@@ -125,20 +123,23 @@
 	};
 
 
-
 	function QF_LoadUserFansNumber(){
 		$.ajax({
-			url: 'https://api.bilibili.com/x/relation/stat?vmid=436662232',
-			headers: {
-				'Access-Control-Allow-Origin': '<origin> | *'
-          	},
+			url: 'https://api.bilibili.com/x/relation/stat?vmid=436662232&jsonp=jsonp',
 			type: 'get',
+			jsonp: 'callback',
 			dataType: 'json',
-			success: function(data) {
-				console.log("userdata"+data)
+			success: function(res) {
+				document.getElementById("UserFansNumber").innerText = res.data.follower;
 			}
          });
 	};
+
+	function QF_LoadUserViewNumber(){
+		console.log("QF_LoadUserViewNumber"); 
+	}
+
+
 
 	// $("#update").click(function(){
 	// 	alert("ddddd");
