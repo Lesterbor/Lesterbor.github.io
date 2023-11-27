@@ -10,73 +10,7 @@
 	</head>
 	<body>
 		<div class="main_page">
-			<div id="head_box" class="head-box"></div>
-			<div id="main_activity" class="user-main-activity">
-				<div class="user-main-icon-box">
-					<div class="outer-circle">
-						<div class="inner-circle"> 
-							<div class="user-main-icon">
-								<img src="./img/user/user_ico.jpg"/> 
-							</div>	
-						</div>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
-				<div class="user-main-info-body">
-					<div class="user-main-info">
-						<div class="user-main-info-name-box">
-							<dic class="user-info-name">Lesterbor | 千樊🎡</dic>
-							<div class="user-info-tag">初心~</div>
-						</div>
-						<div class="user-main-info-link">
-							<div class="user-info-ico">
-								<img src="./img/sys/bilibili_icon.png">
-							</div>
-							<div class="user-info-text-box">
-								<div class="user-info-item">
-									<div class="user-info-text">
-										粉丝数
-									</div>
-									<div id="UserFansNumber" class="user-info-number">
-										***
-									</div>
-								</div>
-								<div class="user-info-item">
-									<div class="user-info-text">
-										获赞数
-									</div>
-									<div class="user-info-number">
-										***
-									</div>
-								</div>
-								<div class="user-info-item">
-									<div class="user-info-text">
-										播放量
-									</div>
-									<div class="user-info-number">
-										***
-									</div>
-								</div>
-								<div class="user-info-item">
-									<div class="user-info-text">
-										作品数
-									</div>
-									<div class="user-info-number">
-										***
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-			<button id="update" type="button" onclick="userBtnClick()">按钮</button>
-
+			<iframe src="https://static-mp-2a106666-ffed-4df7-8b22-e8e15cbf1098.next.bspapp.com/"></iframe>
 		</div>
 	</body>
 </html>
@@ -122,15 +56,22 @@
 		console.log("当前页面高度"+this.pageHight);
 	};
 
+	function callBack(res){
+         document.write(res);
+     }
+
 
 	function QF_LoadUserFansNumber(){
 		$.ajax({
-			url: 'https://api.bilibili.com/x/relation/stat?vmid=436662232&jsonp=jsonp',
+			url: 'https://fc-mp-2a106666-ffed-4df7-8b22-e8e15cbf1098.next.bspapp.com/api',
 			type: 'get',
-			jsonp: 'callback',
 			dataType: 'json',
+			data:{
+				a:123
+			},
 			success: function(res) {
-				document.getElementById("UserFansNumber").innerText = res.data.follower;
+				console.log(res); 
+				//document.getElementById("UserFansNumber").innerText = res.data.follower;
 			}
          });
 	};
