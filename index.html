@@ -1,60 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-Hans-CN">
-	<head>
-		<meta charset="utf-8" />
-		<title>「千樊」</title>
-	</head>
-	<body>
-		<div>
-			<iframe id="iframeWindow" style="margin:0;padding:0;overflow:hidden" frameborder ="no" ></iframe>
-		</div>
-	</body>
+<html>
+ 
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>寒光的个人主页</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="img/style.css" rel="stylesheet" />
+</head>
+ 
+<body>
+    <div class="con1"></div>
+    <div class="con2">
+        <div style="margin:50px 80px;color:white; letter-spacing: 4px;">
+            <table>
+                <tr>
+                    <th colspan="4" style="font-weight: bold; color: orangered;">✈ 个人作品</th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="img-container1">
+                            <img src="img/works1.png" style="width: 100%; height: 100%;" />
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="https://blog.csdn.net/weixin_43151418/article/details/138598621" target="_blank">
+                                作品1：毕业、论文、PPT资源合集整理
+                            </a>
+                        </div>
+                    </td>
+                    <th colspan="2">
+                        <div class="img-container1">
+                            <img src="img/works2.png" style="width: 100%; height: 100%;" />
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="https://blog.csdn.net/weixin_43151418/article/details/138462610" target="_blank">
+                                作品2：HTML5时尚好看的推广系统
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+ 
 </html>
-
-<style type="text/css">
-	*{
-		margin:0;
-		padding:0
-	}
-	html,body{
-		margin:0;
-		padding:0;
-		width: 100%;
-		height: 100%;
-		overflow:hidden;
-	}
-</style>
-
-<script type="text/javascript">
-	var pageHight = 0;
-	var pageWidth = 0;
-	var iframeWindow = null;
-
-	//当页面加载时
-	window.onload = function(){
-		console.log("PageLoad");
-
-		//获取页面元素
-		this.iframeWindow = document.getElementById("iframeWindow");
-
-		var setHeight = document.body.clientHeight + "px";
-		var setWidth = document.body.clientWidth + "px";
-
-		this.iframeWindow.style.height = setHeight;
-		this.iframeWindow.style.width = setWidth;
-
-		this.iframeWindow.src = "https://static-mp-2a106666-ffed-4df7-8b22-e8e15cbf1098.next.bspapp.com"
-
-
-	};
-
-	//当浏览器窗口大小改变时，设置显示内容的高度
-	window.onresize = function(){
-		var setHeight = document.body.clientHeight + "px";
-		var setWidth = document.body.clientWidth + "px";
-
-		this.iframeWindow.style.height = setHeight;
-		this.iframeWindow.style.width = setWidth;
-	};
-</script>
-
